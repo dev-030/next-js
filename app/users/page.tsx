@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 
 
-export default function app(){
+export default function App(){
     const [users,setUsers] = useState(null);
     const router = useRouter();
 
