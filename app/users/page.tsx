@@ -11,14 +11,13 @@ export default function App(){
     const [users,setUsers] = useState(null);
     const router = useRouter();
 
-    useEffect(()=>{
+    // useEffect(()=>{
 
-    fetch('/api/users' , {cache : 'no-store'}).then(data => data.json()).then(data => setUsers(data))
+    // fetch('/api/users' , {cache : 'no-store'}).then(data => data.json()).then(data => setUsers(data))
 
-    },[])
+    // },[])
 
 
-    console.log(users?.[0])
 
     return(
         <div>
