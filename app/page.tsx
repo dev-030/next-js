@@ -12,9 +12,10 @@ export default async function Home() {
         {/* {status == 'loading' && <h1>Loading...</h1>} */}
         <h1>Name : {result!?.user?.name}</h1>
         <h1>Email : {result!?.user!.email}</h1>
-        {!result!?.user  && <Link href="/api/auth/signin">Login</Link> }
-        {result!?.user && <Link href={'/api/auth/signout'}>Sign Out</Link>}
+        {!result!?.user  && <Link href="/api/auth/signin" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Login</Link> }
+        {result!?.user && <Link href={'/api/auth/signout'} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" >Sign Out</Link>}
         <Link href={'/users'}>Users</Link>
       </div>
   )
 }
+  

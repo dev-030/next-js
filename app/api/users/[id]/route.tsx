@@ -6,6 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 // ----------- Get specific users ---------
 export async function GET(request:NextRequest , {params} : {params : {id:string}} ){
+    console.log('hello')
     const user = await prisma.user.findUnique({
         where : {id : parseInt(params.id)}
     })
@@ -21,7 +22,7 @@ export async function GET(request:NextRequest , {params} : {params : {id:string}
 
 export async function PUT(request:NextRequest,{params}:{params:{id:string}}){
     const body = await request.json()
-
+    console.log('hello')
     const user = await prisma.user.findUnique({
         where : {id : parseInt(params.id)}
     })

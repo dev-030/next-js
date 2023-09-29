@@ -12,11 +12,11 @@ export default function App(){
 
     useEffect(()=>{
 
-    fetch('/api/users' , {cache : 'no-store'}).then(data => data.json()).then(data => setUsers(data))
+    // fetch('/api/users' , {cache : 'no-store'}).then(data => data.json()).then(data => setUsers(data))
 
     },[])
 
-    console.log(users?.[0])
+    // console.log(users?.[0])
 
 
 

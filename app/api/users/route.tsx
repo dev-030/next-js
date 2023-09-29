@@ -7,7 +7,7 @@ import { NextRequest, NextResponse } from "next/server";
 // ----------- Get all users ---------
 
 export async function GET(request:NextRequest) {
-
+    console.log('hello')
     const users = await prisma.user.findMany();
     return NextResponse.json(users)
 }
@@ -19,6 +19,8 @@ export async function GET(request:NextRequest) {
 export async function POST(request:NextRequest){
 
     const body = await request.json()
+    console.log('hello')
+
 
     const user = await prisma.user.findUnique({
         where : {email : body.email}
@@ -43,7 +45,7 @@ export async function POST(request:NextRequest){
 export async function DELETE(request:NextRequest) {
 
     const body = await request.json()
-
+    console.log('hello')
     const result = await prisma.user.findUnique({
         where : {email : body.email}
     })
